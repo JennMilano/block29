@@ -1,112 +1,146 @@
-/* Apply a background image to the entire body of the document. */
-body {
-  background-image: url("./concrete.jpg");
-  /* The image used as a background. */
-  background-repeat: no-repeat;
-  /* The background image will not repeat. */
-  background-attachment: fixed;
-  /* The background image will not scroll with the page. */
-  background-size: cover;
-  /* The background image will cover the entire area of the element. */
-}
 
-/* Styling for the introduction text of the application. */
-.intro {
-  text-align: center;
-  /* The text is centered. */
-  color: #610564;
-  /* The color of the text. */
-  font-size: 24px;
-  /* The size of the text. */
-  padding: 24px;
-  /* The padding around the text. */
-  margin-left: 21px;
-  /* The margin to the left of the text. */
-  padding-right: 100px;
-  /* The padding to the right of the text. */
-  padding-left: 100px;
-  /* The padding to the left of the text. */
-}
-
-/* Styling for the container that holds the player cards. */
-.players {
-  display: flex;
-  /* The player cards are displayed using flexbox. */
-  flex-wrap: wrap;
-  /* The player cards will wrap onto the next line if there is not enough space. */
-  /* The player cards are centered on the line. */
-  justify-content: center;
-}
-
-/* Styling for individual player cards. */
-.player-card {
-  width: 360px;
-  /* The width of the card. */
-  height: 380px;
-  /* The height of the card. */
-  margin: 10px;
-  /* The margin around the card. */
-  background-color: white;
-  /* The background color of the card. */
-  border: 3px solid black;
-  /* The border around the card. */
-  border-radius: 3%;
-  /* The radius of the card's corners. */
-  /* The shadow effect around the card. */
-  overflow: hidden;
-  /* Any content that goes outside the card will be hidden. */
-  position: relative;
-  /* The card's position is set to relative so it can be moved using the transform property. */
-  transition: transform 0.3s;
-  /* Transition effect for the transform property. */
-}
-
-/* Styling for when a user hovers over a player card. */
-.player-card:hover {
-  transform: translateY(-5px);
-  /* The card moves up 5 pixels when hovered over. */
-}
-
-/* Styling for the container that holds the player's image. */
-.player-image-container {
-  display: flex;
-  /* The image is centered. */
-  justify-content: center;
-  /* The image is centered along the horizontal axis. */
-  align-items: baseline;
-  /* The image is centered along the vertical axis. */
-  height: 300px;
-  /* The height of the image container. */
-  padding: 10px;
-  /* The padding around the image. */
-}
-
-/* Styling for the player's image. */
-.player-image {
-  width: 250px;
-  /* The width of the image. */
-  height: 150px;
-  /* The height of the image. */
-  object-fit: contain;
-  /* The image will cover the entire area of its container without distorting its aspect ratio. */
-  margin-left: 12px;
-  /* The margin to the left of the image. */
-}
-
-/* Styling for the player's details (name, breed, status). */
-.player-details {
-  display: flex;
-  /* The detailss are displayed using flexbox. */
-  flex-direction: column;
-  /* The details are arranged in a column. */
+.navbar{
   align-items: center;
-  /* The details are centered along the vertical axis. */
+  background-color: #ff0055;
+  border-radius: .8em;
+  color: #05315b;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.home{
+  color:rgb(226, 211, 43);
+  padding: 10px;
+}
+
+.formContainer{
+  background-color: #ccc5b9;
+  border-radius: 2em;
+  color: #403d39;
+  width: 100%;
+  padding: 8px;
+}
+
+.form{
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-evenly;
+}
+
+.form input{
+  width: 50%;
+  height: 32px;
+  border-radius: 6px;
+  border: 0;
+}
+.form button{
+  background-color: #eb5e28;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  border: 0;
+}
+
+.searchTop{
+  background-color: #fff;
+  border-radius: 8px;
+  color: #403d39;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 8px;
+}
+
+.search{
+  font-size: 18px;
+  margin: 5px;
+  width: 40%;
+  border-radius: 8px;
+  padding-left: 12px;
+  border: #6b6b6b 1px solid;
+}
+
+.playerContainer{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  /* The details are centered along the horizontal axis. */
-  color: #000;
-  /* The color of the details text. */
+}
+
+.playerCard{
+  background-color: #ccc5b9;
+
+  height: 550px;
+  margin: 10px; 
+  width: 350px;
+  border-radius: 10px;
+}
+.singlePlayerContainer{
+  display: flex;
+  justify-content: center;
+}
+.singlePlayerCard{
+  background-color: #fff;
+  border: #eb5e28 2px solid;
+  height: 550px;
+  margin: 10px; 
+  width: 400px;
+  border-radius: 10px;
+}
+
+.playerImageContainer{
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  padding: 10px;
+  margin: 12px;
+}
+
+.playerImage{
+  display: grid;
+  height: 320px;
+  object-fit: cover;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.playerDetails{
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  justify-content: center;
+  padding: 2px;
+  font-size: medium;
+  color: #403d39;
+}
+
+.playerDetails button{
+  background-color: #403d39;
+  border-radius: 8px;
+  color: #fff;
   font-size: 16px;
-  /* The size of the details text. */
-  text-align: center;
-  /* The details text is centered. */
+  margin: 10px;
+  padding: 10px;
+  border: 0;
+}
+
+#title-h1 {
+  background-image: url(/assets/PB-Logo.png);
+  border-radius: 50px;
+  width: 100%;
+  height: 280px;
+  background-position: center;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

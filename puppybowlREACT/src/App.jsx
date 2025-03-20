@@ -1,16 +1,22 @@
-// Import the React library, which allows us to define components
+import './App.css'
 
-// Import the Players component, which we'll use to show a list of players
-import Players from "./features/Players";
+import AllPlayers from "./features/AllPlayers";
+import MainRoute from './features/MainRoute'
+import NewPlayerForm from './features/NewPlayerForm'
+
 // Define the App component
 function App() {
   // This component renders the Players component inside a div
   // This div has a class of 'App', which we could use for styling
   return (
     <section>
-      <h1>Puppy Players</h1>
+      <div id="title-h1">
+        <h1></h1>
+        </div>
       <div className="App">
-        <Players />
+        <NewPlayerForm />
+        <MainRoute />
+        <AllPlayers />
       </div>
     </section>
   );
